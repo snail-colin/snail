@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration >
+  <classPathEntry location="E:\workspace\maven-repository\mysql\mysql-connector-java\5.1.31\mysql-connector-java-5.1.31.jar"/>
+  <context id="context" >
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://127.0.0.1:3306/snail" userId="root" password="root" />
+    <javaModelGenerator targetPackage="com.snail.wms.entity" targetProject="src/main/java" />
+    <sqlMapGenerator targetPackage="mapper"  targetProject="src/main/resources" />
+    <javaClientGenerator targetPackage="com.snail.wms.dao" targetProject="src/main/java" type="XMLMAPPER" />
+
+
+     <table schema="snail" tableName="sys_user" domainObjectName="SysUser" enableUpdateByExample="true"
+             enableCountByExample="true" enableDeleteByExample="true" enableSelectByExample="true">
+      </table>
+      <table schema="snail" tableName="sys_role" domainObjectName="SysRole" enableUpdateByExample="true"
+             enableCountByExample="true" enableDeleteByExample="true" enableSelectByExample="true">
+      </table>
+      <table schema="snail" tableName="sys_permission" domainObjectName="SysPermission" enableUpdateByExample="true"
+             enableCountByExample="true" enableDeleteByExample="true" enableSelectByExample="true">
+      </table>
+      <table schema="snail" tableName="sys_user_role" domainObjectName="SysUserRole" enableUpdateByExample="true"
+             enableCountByExample="true" enableDeleteByExample="true" enableSelectByExample="true">
+      </table>
+      <table schema="snail" tableName="sys_role_permission" domainObjectName="SysRolePermission" enableUpdateByExample="true"
+             enableCountByExample="true" enableDeleteByExample="true" enableSelectByExample="true">
+      </table>
+
+  </context>
+</generatorConfiguration>
