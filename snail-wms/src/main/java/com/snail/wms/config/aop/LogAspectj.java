@@ -1,4 +1,4 @@
-package com.snail.wms.config;
+package com.snail.wms.config.aop;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.*;
@@ -13,17 +13,9 @@ import java.util.Arrays;
  * @author colin
  * 2019/1/30
  */
-@Configuration
-@EnableAspectJAutoProxy
-public class LogAopConfig {
+@Aspect
+public class LogAspectj {
 
-    @Bean
-    public LogAspectj logAspectj() {
-        return new LogAspectj();
-    }
-
-    @Aspect
-    class LogAspectj {
         private  Logger logger = LogManager.getLogger();
 
         @Pointcut("execution( public * com.snail.wms.controller.*.*(..))")
@@ -57,5 +49,5 @@ public class LogAopConfig {
 //		Object obj = proceedingJoinPoint.proceed();
 //		return obj;
 //	}
-    }
+
 }

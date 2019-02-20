@@ -1,5 +1,7 @@
 package com.snail.wms.controller;
 
+import com.snail.wms.common.BaseException;
+import com.snail.wms.common.CheckUtil;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 
@@ -13,4 +15,8 @@ import io.swagger.annotations.ApiResponses;
         @ApiResponse(code = 500, message = "服务器出现异常")}
 )
 public class BaseController {
+
+    protected void checkRequest(Object obj) throws BaseException {
+        CheckUtil.checkRequest(obj);
+    }
 }

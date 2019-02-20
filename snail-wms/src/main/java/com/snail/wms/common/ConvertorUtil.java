@@ -1,14 +1,18 @@
 package com.snail.wms.common;
 
 import java.io.IOException;
+import java.util.Map;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import net.sf.json.JSONObject;
 
-
+/**
+ * 转换工具
+ * @author colin
+ */
 public class ConvertorUtil {
 
-    private static ObjectMapper objectMapper = new ObjectMapper();
+    public static ObjectMapper objectMapper = new ObjectMapper();
 
     /**
      * 对象转成json格式
@@ -43,5 +47,22 @@ public class ConvertorUtil {
         } catch (Exception e) {
             return false;
         }
+    }
+
+    /**
+     * json字符串转成map
+     * @param json
+     * @return
+     */
+    public static Map<String, Object> json2map(String json){
+        ObjectMapper obj = new ObjectMapper();
+        Map<String, Object> rst = null;
+        try {
+            rst = obj.readValue(json, Map.class);
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return rst;
     }
 }

@@ -1,15 +1,19 @@
 package com.snail.wms.pojo;
 
+import io.swagger.annotations.ApiModelProperty;
+
 /**
  * @author colin
  * 2019/2/1
  */
-public class BaseRequest {
+public class PageBaseRequest {
 
     //页码
+    @ApiModelProperty(value="页码")
     private  int pageNum = 0;
 
     //每页数量
+    @ApiModelProperty(value="每页数量,默认10")
     private  int pageSize = 10;
 
 
@@ -31,7 +35,7 @@ public class BaseRequest {
 
     @Override
     public String toString() {
-        return "BaseRequest{" +
+        return "PageBaseRequest{" +
                 "pageNum=" + pageNum +
                 ", pageSize=" + pageSize +
                 '}';
