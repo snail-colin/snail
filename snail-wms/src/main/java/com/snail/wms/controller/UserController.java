@@ -83,7 +83,7 @@ public class UserController extends BaseController {
     @ApiOperation(value = "删除用户", produces = "application/json")
     @DeleteMapping("/user/{id}")
     public Result<String> delUser(@PathVariable Integer id) {
-        System.out.println("测试一下2");
+        System.out.println("测试一下22");
         return sysUserService.delUser(id);
     }
 
