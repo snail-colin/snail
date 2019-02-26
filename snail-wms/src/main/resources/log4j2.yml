@@ -4,7 +4,7 @@ Configuration:
   Properties: # 定义变量
     Property:
     - name: log.path
-      value: d:\\tmp\\logs
+      value: ${sys:user.home}/logs
     - name: project.name
       value: snail-wms
 
