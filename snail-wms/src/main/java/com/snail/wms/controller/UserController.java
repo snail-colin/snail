@@ -84,7 +84,7 @@ public class UserController extends BaseController {
     @DeleteMapping("/user/{id}")
     public Result<String> delUser(@PathVariable Integer id) {
         System.out.println("测试一下22");
-        System.out.println("测试一下22");
+        System.out.println("测试一下332");
         return sysUserService.delUser(id);
     }
 
