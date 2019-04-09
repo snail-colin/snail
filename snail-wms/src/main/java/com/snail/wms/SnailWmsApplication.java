@@ -9,6 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SnailWmsApplication {
 
     public static void main(String[] args) {
+        System.out.println(11);
         SpringApplication.run(SnailWmsApplication.class, args);
     }
 
